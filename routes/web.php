@@ -6,9 +6,18 @@ Route::get('/', function () {
 
     $data = [
         'links' => [
-            'about',
-            'more info',
-            'contact us'
+            'about' => [
+                'text' => 'about',
+                'route' => 'about'
+            ],
+            'more_info' => [
+                'text' => 'more info',
+                'route' => 'more-info'
+            ],
+            'contact_us' => [
+                'text' => 'contact us',
+                'route' => 'contact-us'
+            ]
         ],
         'texts' => [
             'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, consectetur qui molestiae dolorum fugiat quam et possimus iusto quidem repellendus recusandae, impedit ea quos vitae hic, ad assumenda incidunt voluptatibus?',
@@ -32,10 +41,10 @@ Route::get('/more_info', function () {
 
     return view('moreinfo');
 
-})->name('more info');
+})->name('more-info');
 
 Route::get('/contact_us', function () {
 
     return view('contactus');
 
-})->name('contact us');
+})->name('contact-us');

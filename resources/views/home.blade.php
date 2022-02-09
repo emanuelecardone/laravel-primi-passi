@@ -60,7 +60,7 @@
         <ul>
             @forelse($links as $link)
                 <li>
-                    <a href="{{route($link)}}">{{$link}}</a>
+                    <a href="{{route($link['route'])}}">{{$link['text']}}</a>
                 </li>
             @empty 
                 <h2>No links were found</h2>
